@@ -18,6 +18,14 @@
             height: 100vh;
             margin: 80px 60px;
         }
+        .link-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .link-container a {
+            margin-left: 10px;
+        }
         .search-form {
             text-align: left;
             width: 450px;
@@ -61,43 +69,33 @@
         .search-btn:hover {
             background-color: #357AE8;
         }
-        .link-container {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-
-        .link-container a {
-            margin-left: 10px;
-        }
     </style>
 </head>
 <body>
-    <div class="link-container">
-        <a href="./index.html">Google Search</a>
-    </div>
-
     <div class="container">
-        <form action="https://www.google.com/search" class="search-form">
+        <div class="link-container">
+            <a href="./index.html">Google Search</a>
+        </div>
+        <form class="search-form" action="https://www.google.com/search">
             <p>Find pages with...</p>
             <div class="search-group">
-                <label for="all-words" class="search-label">all these words:</label><br>
-                <input type="text" id="all-words" name="as_q" class="search-input">
+                <label class="search-label" for="all-words">all these words:</label><br>
+                <input class="search-input" type="text" id="all-words" name="as_q">
             </div>
             <div class="search-group">
-                <label for="exact-word" class="search-label">this exact word or phrase:</label><br>
-                <input type="text" id="exact-word" name="as_epq" class="search-input">
+                <label class="search-label" for="exact-word">this exact word or phrase:</label><br>
+                <input class="search-input" type="text" id="exact-word" name="as_epq">
             </div>
             <div class="search-group">
-                <label for="any-words" class="search-label">any of these words:</label><br>
-                <input type="text" id="any-words" name="as_oq" class="search-input">
+                <label class="search-label" for="any-words">any of these words:</label><br>
+                <input class="search-input" type="text" id="any-words" name="as_oq">
             </div>
             <div class="search-group">
-                <label for="none-words" class="search-label">none of these words:</label><br>
-                <input type="text" id="none-words" name="as_eq" class="search-input">
+                <label class="search-label" for="none-words">none of these words:</label><br>
+                <input class="search-input" type="text" id="none-words" name="as_eq">
             </div>
             <div class="btn-container">
-                <input type="submit" value="Advanced Search" class="search-btn">
+                <input class="search-btn" type="submit" value="Advanced Search">
             </div>
         </form>
     </div>

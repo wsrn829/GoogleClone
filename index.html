@@ -10,6 +10,15 @@
             margin: 0;
             padding: 0;
         }
+        .link-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .link-container a {
+            margin-left: 10px;
+        }
         .container {
             display: flex;
             justify-content: center;
@@ -31,22 +40,13 @@
         .search-btn, button {
             padding: 10px 20px;
             border: none;
-            border-radius: 20px;
+            border-radius: 5px;
             background-color: #4CAF50;
             color: white;
             cursor: pointer;
         }
         .search-btn:hover {
             background-color: #45a049;
-        }
-        .link-container {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-
-        .link-container a {
-            margin-left: 10px;
         }
     </style>
 </head>
@@ -56,13 +56,13 @@
         <a href="./advanced.html">Advanced Search</a>
     </div>
     <div class="container">
-        <form action="https://www.google.com/search" class="search-form">
-            <img src="./logo.svg" alt="Logo" >
+        <form class="search-form" action="https://www.google.com/search">
+            <img src="./logo.svg" alt="Logo">
             <br >
-            <input type="text" name="q" class="search-input">
+            <input class="search-input" type="text" name="q">
             <br >
-            <input type="submit" value="Google Search" class="search-btn">
-            <input type="submit" value="I'm Feeling Lucky" class="search-btn" name="btnI">
+            <input class="search-btn" type="submit" value="Google Search">
+            <input class="search-btn" type="submit" name="btnI" value="I'm Feeling Lucky">
         </form>
     </div>
 </body>

@@ -16,6 +16,14 @@
             align-items: center;
             height: 100vh;
         }
+        .link-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .link-container a {
+            margin-left: 10px;
+        }
         .search-form {
             text-align: center;
         }
@@ -31,22 +39,13 @@
         .search-btn {
             padding: 10px 20px;
             border: none;
-            border-radius: 20px;
+            border-radius: 5px;
             background-color: #4CAF50;
             color: white;
             cursor: pointer;
         }
         .search-btn:hover {
             background-color: #45a049;
-        }
-        .link-container {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-
-        .link-container a {
-            margin-left: 10px;
         }
     </style>
 </head>
@@ -55,13 +54,13 @@
         <div class="link-container">
             <a href="./index.html">Google Search</a>
         </div>
-        <form action="https://www.google.com/search" class="search-form">
+        <form class="search-form" action="https://www.google.com/search" method="GET">
             <img src="./logo.svg" alt="Logo" >
             <br>
-            <input type="text" name="tbm" value="isch" hidden>
-            <input type="text" name="q" class="search-input">
+            <input type="hidden" name="tbm" value="isch">
+            <input class="search-input" type="text" name="q">
             <br>
-            <input type="submit" value="Google Image Search" class="search-btn">
+            <input class="search-btn" type="submit" value="Google Image Search">
         </form>
     </div>
 </body>
